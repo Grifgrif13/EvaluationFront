@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css';
+
+/*Start - Globals*/
+:root{
+  /*orangeBase*/
+  --primaryColor:rgb(234 88 12);
+  /*orangeHover*/
+  --primaryHoverColor: rgb(251 146 60);
+  /*whiteBase*/
+  --baseColor: #fff;
+  /*plumBase*/
+  --secondaryColor: #811453;
+  /*plumHover*/
+  --secondaryHoverColor: #991662;
+  /*lightBackground*/
+  --backgroundColor: #f2f2f2;
+  --textColor: #000;
+  --textUrlColor: rgb(59 130 246);
+  --fontFamily: arial,sans-serif;
+  --disableBackgroundColor: rgb(229 231 235);
+  --disableTextColor: rgb(75 85 99);
+}
+
+body {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+}
+
+h1 {
+  color: var(--primaryColor);
+  font-family: var(--fontFamily);
+}
+
+input:focus {
+  border-style: none;
+  outline: 0px solid transparent;
+  outline-offset: 0px;
+}
+/*End - Globals*/
+
+/**Start - BUTTONS**/
+button, .declineButton, .acceptedButton {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 0.5rem;
+  min-width: 70px;
+  color: var(--baseColor);
+}
+
+.declineButton {
+  background-color: var(--secondaryColor);
+}
+
+.declineButton:hover {
+  background-color: var(--secondaryHoverColor);
+}
+
+.acceptedButton {
+  background-color: var(--primaryColor);
+}
+
+.acceptedButton:hover {
+  background-color: var(--primaryHoverColor);
+}
+/**End - BUTTONS**/
+
+/*Start - Popups*/
+.delete-success-popup {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primaryColor);
+  color: var(--baseColor);
+  padding: 15px;
+  border-radius: 5px;
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.delete-success-popup.fade-out {
+  opacity: 0;
+}
+/*End - Popups*/
+
+.form-group input {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem ;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-width: 1px;
+  border-color: rgb(209 213 219 / 1);
+  border-radius: 0.25rem;
+}
